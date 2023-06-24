@@ -1,4 +1,3 @@
-<!-- Proposito: Este sistema debe permitir ver datos de patentes y pagar multas almacenadas en bases de datos -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,15 +15,30 @@
     </header>
 
     <div class="form-container">
-        <form action="patenteData.php" method="post">
+        <form action="#" method="post">
             <div class="input-group">
-                <label for="patent">Patente:</label>
-                <input type="text" name="patent" id="patent">
+                <label for="multa">ID de multa:</label>
+                <input type="text" name="multa" id="multa">
             </div>
             <input type="submit" value="submit" name="submit">
         </form>
     </div>
 
     <footer></footer>
+
+    <?php 
+       if(isset($_POST['submit'])){
+            include "conection.php";
+            $multa = $_POST['multa'];
+            $consulta = 'UPDATE multas SET Estado = "Pagado" WHERE Multa_ID = "'.$multa.'"';
+            $resultado = mysqli_query($conexion,$consulta);
+            if($resultado == false) echo "ERROR";
+
+            if($resultado){
+                echo "multa pagada";
+            }
+            
+        }
+    ?>
 </body>
 </html>
