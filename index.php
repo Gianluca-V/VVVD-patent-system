@@ -12,7 +12,7 @@
 <body>
     <header class="header">
        <a href="index.php"> <h1 class="title">Patentes VVVD</h1> </a>
-       <a href="pagarMulta.php"><h2>Pagar Multa</h2></a>
+       <a href="pagarMulta.php"><h2>Pagar Multas</h2></a>
     </header>
 
     <div class="form-container">
@@ -21,7 +21,7 @@
                 <label for="patent">Patente:</label>
                 <input type="text" name="patent" id="patent">
             </div>
-            <input type="submit" value="submit" name="submit">
+            <input type="submit" value="Buscar" name="submit">
         </form>
     </div>
 

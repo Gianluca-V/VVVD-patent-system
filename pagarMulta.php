@@ -35,7 +35,7 @@
             if($resultado == false) echo "ERROR";
 
             if($resultado){
-                echo "multa pagada";
+                echo '<div class="multa-result"> Multa pagada </div>';
             }
             
         }

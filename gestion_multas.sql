@@ -58,17 +58,17 @@ CREATE TABLE `patentes` (
   `Patente_ID` varchar(7) NOT NULL,
   `nombre` varchar(99) NOT NULL,
   `dni` varchar(9) NOT NULL,
-  `dirección` varchar(99) NOT NULL,
+  `direction` varchar(99) NOT NULL,
   `modelo` varchar(99) NOT NULL,
   `marca` varchar(99) NOT NULL,
-  `año` int(4) NOT NULL
+  `year` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `patentes`
 --
 
-INSERT INTO `patentes` (`Patente_ID`, `nombre`, `dni`, `dirección`, `modelo`, `marca`, `año`) VALUES
+INSERT INTO `patentes` (`Patente_ID`, `nombre`, `dni`, `direction`, `modelo`, `marca`, `year`) VALUES
 ('AB123CD', 'John', '12345678', '123 Main Street', 'Focus', 'Ford', 2023),
 ('BC234DE', 'Lisa', '23456789', '456 Elm Avenue', 'Civic', 'Honda', 2023),
 ('CD345EF', 'Mark', '34567890', '789 Oak Boulevard', 'Corolla', 'Toyota', 2023),
