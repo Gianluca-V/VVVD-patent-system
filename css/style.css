@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
 }
 
@@ -15,13 +15,33 @@
     
 }
 
-body{
+@keyframes links{
+    0%{
+        border-bottom: 1px solid black;
+    }
+    100%{
+        border-bottom: 3px solid black;
+    }
+}
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-height: max(100vh, 400px);
-    background-color: var(--secondary-color);
+}
+
+.background{
+    z-index: -10;
+    opacity: .6;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: round;
+    background-size: cover; 
+    background-image: url(//cms-gauib.s3.eu-central-1.amazonaws.com/noticias/imagenes/que_significan_las_senales_que_pueden_hacer_los_agentes_de_trafico.jpg?v=165);
 }
 
 .header{
@@ -32,8 +52,23 @@ body{
     background-color: var(--background-color);
     width: 100%;
     padding: 6px;
-    padding-inline: 16px;
-    
+    padding-inline: 16px;   
+    font-size:min(2.5rem,2.5vw);
+}
+
+
+
+.nav__ul{
+    display:flex;
+    justify-content: space-around;
+    gap: 1rem;
+    font-size:min(2rem,2vw);
+}
+
+.nav__li{
+    display: block;
+    border:0;
+    animation: links 3s linear infinite;
 }
 
 .header a{
@@ -47,6 +82,12 @@ body{
 
 .header a > *{
     font-size: clamp(0.6rem, 5vw, 3rem);
+}
+
+.patente-form{
+    background-image: url('../assets/patente.jpg'); 
+    background-size: cover;
+    background-repeat: round;
 }
 
 .form-container{
@@ -139,4 +180,60 @@ input[type="submit"]{
 .multa-result{
     font-size: 2rem;
     margin-bottom: 2rem;
+}
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 00px;
+  font-size: 3vw !important;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    font-size: 1.5rem !important;
+    padding: 12px 50px;
+  }
+}
+
+.multa-ticket{
+    background-color: #ccc;
+    width:66%;
+    font-size:3vw;
 }
